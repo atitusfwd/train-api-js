@@ -1,0 +1,23 @@
+  <div class="form-group">
+    <label for="employeeIdPicker">Employee Selector</label>
+    <select id="employeeIdPicker" class="selectpicker"
+            ng-options="id for id in EmployeeData.employeeIdList"
+            ng-model="EmployeeData.selectedEmployees"
+            ng-change="selectEmployees()">
+            <option value="">Pick One</option></select>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">Employee Information</div>
+    <table class="table">
+      <tr><th>Employee Id</th><th>Last Name, First Name</th><th>Home Address</th></tr>
+      <tr ng-repeat="emp in EmployeeData.detail">
+        <td>{{emp.id}}</td>
+        <td>{{emp.lastName}}, {{emp.firstName}}</td>
+        <td><address>
+              {{emp.addressLine1}} <br>
+              {{emp.city}}, {{emp.state}} {{emp.zipcode}}
+            </address>
+        </td>
+      </tr>
+    </table>
+  </div>
