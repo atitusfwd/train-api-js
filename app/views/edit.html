@@ -1,0 +1,106 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Home Address Change</div>
+  <div class="panel-body">
+     <div class="form-group">
+        <label for="addressLine1">Address Line 1</label>
+        <input id="addressLine1" ng-model="EmployeeData.addressInfo.homeAddress.addressLine1" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="addressLine2">Address Line 2</label>
+        <input id="addressLine2" ng-model="EmployeeData.addressInfo.homeAddress.addressLine2" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="city">City</label>
+        <input id="city" ng-model="EmployeeData.addressInfo.homeAddress.city" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="county">County</label>
+        <input id="county" ng-model="EmployeeData.addressInfo.homeAddress.county" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="stateAbbr">State (Abbr)</label>
+        <input id="stateAbbr" ng-model="EmployeeData.addressInfo.homeAddress.stateAbbr" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="zipCode">Zip Code</label>
+        <input id="zipCode" ng-model="EmployeeData.addressInfo.homeAddress.zipCode" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="zipSuffix">Zip Suffix</label>
+        <input id="zipSuffix" ng-model="EmployeeData.addressInfo.homeAddress.zipSuffix" class="form-control"/>
+     </div>
+   </div>
+</div><!-- /home address-->
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Work (W2) Address Change</div>
+  <div class="panel-body">
+     <div class="form-group">
+        <label for="w2AddressLine1">Address Line 1</label>
+        <input id="w2AddressLine1" ng-model="EmployeeData.addressInfo.w2Address.addressLine1" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="w2AddressLine2">Address Line 2</label>
+        <input id="w2AddressLine2" ng-model="EmployeeData.addressInfo.w2Address.addressLine2" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="w2City">City</label>
+        <input id="w2City" ng-model="EmployeeData.addressInfo.w2Address.city" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="w2County">County</label>
+        <input id="w2County" ng-model="EmployeeData.addressInfo.w2Address.county" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="w2StateAbbr">State (Abbr)</label>
+        <input id="w2StateAbbr" ng-model="EmployeeData.addressInfo.w2Address.stateAbbr" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="w2ZipCode">Zip Code</label>
+        <input id="w2ZipCode" ng-model="EmployeeData.addressInfo.w2Address.zipCode" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="w2ZipSuffix">Zip Suffix</label>
+        <input id="w2ZipSuffix" ng-model="EmployeeData.addressInfo.w2Address.zipSuffix" class="form-control"/>
+     </div>
+   </div>
+</div><!-- /work address-->
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Alternate Mailing Address Change</div>
+  <div class="panel-body">
+     <div class="form-group">
+        <label for="altAddressLine1">Address Line 1</label>
+        <input id="altAddressLine1" ng-model="EmployeeData.addressInfo.altAddress.addressLine1" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="altAddressLine2">Address Line 2</label>
+        <input id="altAddressLine2" ng-model="EmployeeData.addressInfo.altAddress.addressLine2" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="altCity">City</label>
+        <input id="altCity" ng-model="EmployeeData.addressInfo.altAddress.city" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="altCounty">County</label>
+        <input id="altCounty" ng-model="EmployeeData.addressInfo.altAddress.county" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="altStateAbbr">State (Abbr)</label>
+        <input id="altStateAbbr" ng-model="EmployeeData.addressInfo.altAddress.stateAbbr" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="altZipCode">Zip Code</label>
+        <input id="altZipCode" ng-model="EmployeeData.addressInfo.altAddress.zipCode" class="form-control"/>
+     </div>
+     <div class="form-group">
+        <label for="altZipSuffix">Zip Suffix</label>
+        <input id="altZipSuffix" ng-model="EmployeeData.addressInfo.altAddress.zipSuffix" class="form-control"/>
+     </div>
+   </div>
+</div><!-- /work address-->
+<input type="button" class="btn btn-primary" value="Submit Employee Address Changes" ng-click="updateAddressInfo()"/></td>
+<input type="button" class="btn btn-default" value="Cancel to employee list" ng-click="cancelToList()"/></td>

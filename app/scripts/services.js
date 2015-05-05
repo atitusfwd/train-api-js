@@ -5,6 +5,43 @@ var services = angular.module('apiClientExampleApp.services',[]);
 services.factory('ApiService', ['$http', '$q', function($http,$q) {
   var newobj = {};
 
+
+  // factory method to perform a POST update, where the message body is JSON
+  newobj.updateAddress = function(apiSessionObj,updateAddress) {
+    var deferred = $q.defer();
+    apiPostJson(
+      apiSessionObj.apiUrlBase+'/services/rest/employee/updateAddressInfo', updateAddress
+      )
+      .success(function(data){
+        deferred.resolve(data);
+      })
+      .error(function(msg,code){
+        deferred.reject("Unable to update employee address objects");
+      });
+    return deferred.promise;
+  };
+
+
+
+  // factory method to get the address info object, with checksum
+  newobj.getAddressInfo = function(apiSessionObj, id) {
+    var deferred = $q.defer();
+    var _params = {
+      sessionId: apiSessionObj.sessionId,
+      clientId: apiSessionObj.clientId,
+      employeeId: id
+    };
+    apiGet(
+      apiSessionObj.apiUrlBase+'/services/rest/employee/getAddressInfo', _params
+    ).success(function(data){
+      deferred.resolve(data);
+    }).error(function(msg,code){
+      deferred.reject('Error occurred');
+    });
+    return deferred.promise;
+  };
+
+
   // factory method to retrieve a detailed employee object
   newobj.getEmployeeDetail = function(apiSessionObj,employeeData) {
     var deferred = $q.defer();
@@ -57,6 +94,17 @@ services.factory('ApiService', ['$http', '$q', function($http,$q) {
       peoId: apiSessionObj.peoId
     };
     return apiPostEncoded(apiSessionObj.apiUrlBase+'/services/rest/login/createPeoSession',myData);
+  };
+
+
+  /* Utility POST function to call the HRPyramid Services API which takes a JSON
+     message body and returns a promise */
+  var apiPostJson = function(url, dataObj) {
+    var _config = {
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      timeout: 10000
+    };
+    return $http.post(url,dataObj,_config);
   };
 
 

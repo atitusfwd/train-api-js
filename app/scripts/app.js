@@ -22,6 +22,9 @@ angular.module('apiClientExampleApp', [
   })
   .config(function($routeProvider) {
     $routeProvider
+      .when('/edit', {
+        templateUrl: '/views/edit.html'
+      })
       .when('/list', {
         templateUrl: '/views/list.html'
       })

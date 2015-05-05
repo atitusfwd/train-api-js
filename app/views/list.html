@@ -16,7 +16,8 @@
         <td><address>
               {{emp.addressLine1}} <br>
               {{emp.city}}, {{emp.state}} {{emp.zipcode}}
-            </address>
+            </address> <br>
+            <input type="button" class="btn btn-primary" value="Edit Address Info" ng-click="editEmployee(emp.id)"/>
         </td>
       </tr>
     </table>
