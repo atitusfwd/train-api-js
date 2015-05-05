@@ -37,7 +37,11 @@
         </div>
       </div>
 
-      <div> I'm boring, but I exist! </div>
+      <!-- place any high level error messages -->
+      <div api-error-message ng-if="ApiSession.error"><span ng-bind="ApiSession.error"></span></div>
+
+      <!--templates loaded by the router -->
+      <div ng-view></div>
 
     </div><!-- /container -->
 

@@ -1,0 +1,24 @@
+<div ng-switch="ApiSession.auth">
+
+  <div ng-switch-when="session"><!-- please pick a client -->
+    <h3>Login successful. Session id is {{ApiSession.sessionId}}</h3>
+  </div>
+
+  <div ng-switch-default><!-- please login -->
+    <form ng-submit="createSession()">
+      <div class="form-group">
+        <label for="inputPeoId" >Peo ID</label>
+        <input id="inputPeoId" ng-model="ApiSession.peoId" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="inputUser" >User Name</label>
+        <input id="inputUser" ng-model="ApiSession.username" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="inputPass">Password</label>
+        <input id="inputPass" type="password" ng-model="ApiSession.password" class="form-control"/>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Create Session"/>
+  </div>
+
+</div>
