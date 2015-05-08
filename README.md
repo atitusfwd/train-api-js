@@ -27,6 +27,7 @@ This project is built under nodejs with bower and grunt.
    Other plaforms can install git from here http://git-scm.com/downloads
 5. from git command shell, clone this project  
     `git clone https://github.com/atitusfwd/train-api-js.git`  
+    `cd train-api-js`
 
 6. Tell node package manager to create the local copies of packages needed to run  
     `npm install`  
